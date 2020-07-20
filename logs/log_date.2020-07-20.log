@@ -1,0 +1,245 @@
+[2020-07-20T09:00:48.314] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:48:07.029] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:49:04.386] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:49:14.747] [ERROR] default - ECONNREFUSED:	undefined
+[2020-07-20T11:49:48.410] [ERROR] default - undefined:	undefined
+[2020-07-20T11:50:11.672] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:50:13.648] [ERROR] default - 1064:	sho1w databases
+[2020-07-20T11:51:20.137] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:51:21.550] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:51:32.596] [ERROR] default - sql language error: errcode:1064	sho1w databases
+[2020-07-20T11:52:25.557] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:52:26.971] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:52:30.714] [ERROR] default - sql language error: errcode:1064 `sho1w databases`
+[2020-07-20T11:52:42.263] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:56:34.768] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:57:12.150] [INFO] default - The server is running in 8080 port
+[2020-07-20T11:59:44.549] [INFO] default - The server is running in 8080 port
+[2020-07-20T12:01:43.167] [INFO] default - The server is running in 8080 port
+[2020-07-20T12:03:00.974] [INFO] default - The server is running in 8080 port
+[2020-07-20T12:03:05.515] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:28:15.616] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:28:34.185] [ERROR] default - sql language error: errcode:ECONNRESET	`undefined`
+[2020-07-20T13:31:15.357] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:31:27.284] [ERROR] default - sql language error: errcode:ECONNREFUSED	`undefined`
+[2020-07-20T13:31:59.863] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:32:04.626] [ERROR] default - sql language error: errcode:ECONNREFUSED	`undefined`
+[2020-07-20T13:33:34.086] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:33:43.440] [ERROR] default - sql language error: errcode:ECONNREFUSED	`undefined`
+[2020-07-20T13:36:07.174] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:37:13.577] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:37:17.318] [ERROR] default - sql language error: errcode:1064	`
+  USE wordpress;
+  SELECT 
+  student.*,
+  grade.name
+FROM
+  student 
+  LEFT JOIN grade
+    ON student.grade = grade.id
+ORDER BY student.grade ASC ;
+  `
+[2020-07-20T13:38:20.960] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:38:23.999] [ERROR] default - sql language error: errcode:1046	`
+  SELECT 
+  student.*,
+  grade.name
+FROM
+  student 
+  LEFT JOIN grade
+    ON student.grade = grade.id
+ORDER BY student.grade ASC ;
+  `
+[2020-07-20T13:38:34.790] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:38:41.718] [ERROR] default - sql language error: errcode:1046	`
+  SELECT 
+  student.*,
+  grade.name
+FROM
+  student 
+  LEFT JOIN grade
+    ON student.grade = grade.id
+ORDER BY student.grade ASC ;
+  `
+[2020-07-20T13:39:27.321] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:39:38.923] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:39:42.843] [ERROR] default - sql language error: errcode:1046	`
+  SELECT 
+  student.*,
+  grade.name
+FROM
+  student 
+  LEFT JOIN grade
+    ON student.grade = grade.id
+ORDER BY student.grade ASC ;
+`
+[2020-07-20T13:40:36.304] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:40:39.823] [ERROR] default - sql language error: errcode:1046	`SELECT student.*,grade.name FROM student LEFT JOIN grade ON student.grade = grade.id ORDER BY student.grade ASC ;`
+[2020-07-20T13:40:53.051] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:41:00.673] [ERROR] default - sql language error: errcode:1046	`SELECT student.*,grade.name FROM student LEFT JOIN grade ON student.grade = grade.id ORDER BY student.grade ASC ;`
+[2020-07-20T13:41:27.997] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:41:29.051] [INFO] default - The server is running in 8080 port
+[2020-07-20T13:41:31.790] [ERROR] default - sql language error: errcode:1046	`SELECT student.* FROM student `
+[2020-07-20T13:55:37.031] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:03:28.871] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:04:10.751] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:05:16.016] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:05:37.723] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:06:50.422] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:07:20.208] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:07:29.624] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:07:53.597] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:09:44.340] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:09:52.541] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:10:24.811] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:11:32.670] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:12:27.184] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:13:10.240] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:17:00.595] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:17:43.034] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:22:47.616] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:28:53.977] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:29:06.524] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:29:28.288] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:36:12.569] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:38:42.620] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:41:10.411] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:41:32.547] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:42:13.016] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:42:31.704] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:44:01.817] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:46:05.911] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:46:11.617] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:46:49.148] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:46:54.120] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:47:47.005] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:48:20.546] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:48:34.519] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:48:55.155] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:49:08.645] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:49:16.329] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:49:33.260] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:49:58.527] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:50:05.922] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:50:11.073] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:50:26.935] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:50:53.216] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:50:55.037] [ERROR] default - sql language error: errcode:1064	`use1 wordpress;`
+[2020-07-20T14:51:52.977] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:52:06.099] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:52:08.030] [ERROR] default - sql language error: errcode:1064	`use1 wordpress;`
+[2020-07-20T14:52:14.054] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:52:16.427] [INFO] default - The server is running in 8080 port
+[2020-07-20T14:52:19.351] [ERROR] default - sql language error: errcode:1054	`
+      SELECT 
+      student.`id1`,
+      student.`name`,
+      student.`sex`,
+      student.`introduction`,
+      student.`photo`,
+      student.`email`,
+      grade.`name` AS 'grade' 
+    FROM
+      `student` 
+      LEFT JOIN `grade` 
+        ON student.`grade` = grade.`id` 
+    ORDER BY student.`grade` ASC ;
+             `
+[2020-07-20T14:52:29.730] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:00:05.648] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:02:34.354] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:05:40.471] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:08:56.024] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:15:52.089] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:16:12.831] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:17:03.513] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:21:25.978] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:24:15.987] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:24:25.673] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:24:48.620] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:26:41.219] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:27:10.770] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:27:17.099] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:28:40.772] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:28:51.347] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:31:03.348] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:31:05.308] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:31:15.704] [ERROR] default - sql language error: errcode:1064	`
+UPDATE 
+  student 
+SET
+  `name` = zpliu,
+  `sex` = 1,
+  `grade` = 5,
+  `photo` = dasdas,
+  `email` = 19445322210@qq.com 
+WHERE `id` = 5 ;
+  `
+[2020-07-20T15:32:56.561] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:33:38.095] [ERROR] default - sql language error: errcode:1054	`
+UPDATE 
+  student 
+SET
+  `name` = 'zpliu',
+  `sex` = 4,
+  `grade` = undefined,
+  `photo` = 'dasdas',
+  `email` = '19445322210@qq.co' 
+WHERE `id` = 5 ;
+  `
+[2020-07-20T15:35:03.619] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:36:07.318] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:37:37.441] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:40:30.440] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:46:46.494] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:52:00.310] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:52:07.407] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:54:00.414] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:54:14.868] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:56:07.233] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:56:14.101] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:56:41.124] [INFO] default - The server is running in 8080 port
+[2020-07-20T15:56:48.356] [ERROR] default - sql language error: errcode:1054	`
+   INSERT INTO student (
+    `name`,
+    `sex`,
+    `grade`,
+    `photo`,
+    `ema1il`
+  ) 
+  VALUES
+    (
+      '留着博' ,
+      1,
+      4,
+      'dasdas',
+      '19445322210@qq.com'
+    ) ; 
+  `
+[2020-07-20T15:56:53.217] [ERROR] default - sql language error: errcode:1054	`
+   INSERT INTO student (
+    `name`,
+    `sex`,
+    `grade`,
+    `photo`,
+    `ema1il`
+  ) 
+  VALUES
+    (
+      '留着博' ,
+      1,
+      4,
+      'dasdas',
+      '19445322210@qq.com'
+    ) ; 
+  `
+[2020-07-20T15:57:00.746] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:02:53.101] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:02:54.405] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:03:18.193] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:06:22.516] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:06:25.192] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:06:31.795] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:07:42.341] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:07:56.325] [INFO] default - The server is running in 8080 port
+[2020-07-20T16:08:05.880] [INFO] default - The server is running in 8080 port
