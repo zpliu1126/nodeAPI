@@ -42,6 +42,7 @@ app.use(primerRouter)
 /**
  *error middleware
  */
+
 app.use(function (err, req, res, next) {
   res.json(err)
 })
