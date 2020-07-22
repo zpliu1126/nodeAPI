@@ -8,25 +8,7 @@ var router = express.Router()
 var confVar = require(path.join(__dirname, '../../conf/conf.js'))
 const DataBase = 'wordpress'
 const logger = confVar.logger
-const mysqlconnection = confVar.connection
-
-function sqlQueryPromise(sqlConnecion, sql, next) {
-  return new Promise((resolve, NULL) => {
-    sqlConnecion.query(sql, function (err, result) {
-      if (err) {
-        console.log(err)
-        logger.error(
-          'sql language error: errcode:' + err.errno + '\t`' + err.sql + '`'
-        )
-        next({
-          code: err.errno,
-        }) //sql language error
-        return
-      }
-      resolve(result)
-    })
-  })
-}
+const sqlQueryPromise = confVar.sqlQueryPromise
 
 /**
  * get All People message
@@ -48,9 +30,9 @@ FROM
     ON student.\`grade\` = grade.\`id\` 
 ORDER BY student.\`grade\` ASC ;
   `
-  sqlQueryPromise(mysqlconnection, `use ${DataBase};`, next)
+  sqlQueryPromise(`use ${DataBase};`, next)
     .then(() => {
-      return sqlQueryPromise(mysqlconnection, sql, next)
+      return sqlQueryPromise(sql, next)
     })
     .then((result) => {
       res.json(result)
@@ -71,9 +53,9 @@ SET
   \`email\` = '${req.body.email}' 
 WHERE \`id\` =${req.body.id}  ;
   `
-  sqlQueryPromise(mysqlconnection, `use ${DataBase};`, next)
+  sqlQueryPromise(`use ${DataBase};`, next)
     .then(() => {
-      return sqlQueryPromise(mysqlconnection, sql, next)
+      return sqlQueryPromise(sql, next)
     })
     .then(() => {
       res.json({ code: 0 })
@@ -101,9 +83,9 @@ router.post('/people/insert', function (req, res, next) {
       '${req.body.email}'
     ) ; 
   `
-  sqlQueryPromise(mysqlconnection, `use ${DataBase};`, next)
+  sqlQueryPromise(`use ${DataBase};`, next)
     .then(() => {
-      return sqlQueryPromise(mysqlconnection, sql, next)
+      return sqlQueryPromise(sql, next)
     })
     .then(() => {
       res.json({ code: 0 })
@@ -113,9 +95,9 @@ router.post('/people/delete', function (req, res, next) {
   sql = `
   DELETE FROM student WHERE id=${req.body.id};
   `
-  sqlQueryPromise(mysqlconnection, `use ${DataBase};`, next)
+  sqlQueryPromise(`use ${DataBase};`, next)
     .then(() => {
-      return sqlQueryPromise(mysqlconnection, sql, next)
+      return sqlQueryPromise(sql, next)
     })
     .then(() => {
       res.json({ code: 0 })
