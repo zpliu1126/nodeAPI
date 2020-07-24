@@ -1,9 +1,31 @@
 const express = require('express')
 var app = express() //init server
+var session = require('express-session') //use session
+var FileStore = require('session-file-store')(session) //use file store session
+
 path = require('path')
 const confVar = require(path.join(__dirname, 'conf/conf.js'))
 // open static resource
 app.use('/public/', express.static('./public/'))
+
+//use express-session
+var fileStoreOptions = {
+  ttl: 86400, //session文件一天后清理
+  path: path.join(__dirname, './sessions'),
+}
+app.use(
+  session({
+    secret: 'cotton',
+    name: 'token',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 86400000, //cookie一天之后过期
+      path: '/',
+    },
+    store: new FileStore(fileStoreOptions),
+  })
+)
 
 /**
  * config template engine;
@@ -28,21 +50,14 @@ logger = confVar.logger
 // logger.trace('and this little thing went wee, wee, wee, all the way home.')
 
 /**
- * test router API
+ * load router
  */
-const testRouter = require(path.join(__dirname, 'API/people/peopleRouter.js'))
-app.use(testRouter)
-
-/**
- * primer router API
- */
-const primerRouter = require(path.join(__dirname, 'API/primer/primerRouter.js'))
-app.use(primerRouter)
+const loadRouter = require(path.join(__dirname, 'API/index.js'))
+loadRouter(app)
 
 /**
  *error middleware
  */
-
 app.use(function (err, req, res, next) {
   res.json(err)
 })
