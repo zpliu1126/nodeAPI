@@ -1,9 +1,5 @@
 const express = require('express')
 const path = require('path')
-const { connect } = require('http2')
-const { resolve } = require('path')
-const { nextTick } = require('process')
-const { sqlPoolconnection } = require('../../conf/mysqlconf')
 var router = express.Router()
 var confVar = require(path.join(__dirname, '../../conf/conf.js'))
 const DataBase = 'wordpress'
