@@ -12,18 +12,20 @@ app.use('/public/', express.static('./public/'))
 var fileStoreOptions = {
   ttl: 86400, //session文件一天后清理
   path: path.join(__dirname, './sessions'),
+  factor: 5,
 }
 app.use(
   session({
+    store: new FileStore(fileStoreOptions),
     secret: 'cotton',
     name: 'token',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: {
       maxAge: 86400000, //cookie一天之后过期
       path: '/',
     },
-    store: new FileStore(fileStoreOptions),
+    rolling: true, //每个请求都重新设置一个cookie
   })
 )
 
