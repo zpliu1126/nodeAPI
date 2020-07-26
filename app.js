@@ -56,21 +56,6 @@ const loadRouter = require(path.join(__dirname, 'API/index.js'))
 loadRouter(app)
 
 /**
- *error middleware
- */
-app.use(function (err, req, res, next) {
-  res.json(err)
-})
-/**
- * reponse:404
- * errCode: 1
- */
-app.use(function (req, res) {
-  res.json({
-    code: 404,
-  })
-})
-/**
  * node run port
  */
 app.listen(8080, function () {
