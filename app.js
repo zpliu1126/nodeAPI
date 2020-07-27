@@ -18,7 +18,7 @@ app.use(
   session({
     store: new FileStore(fileStoreOptions),
     secret: 'cotton',
-    name: 'token',
+    name: 'cotttonweb_session_id',
     resave: false,
     saveUninitialized: false,
     cookie: {

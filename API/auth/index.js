@@ -10,7 +10,10 @@ const username = 'zpliu'
 const password = '111'
 router.post('/login', function (req, res, next) {
   if (req.session.data) {
-    res.json(req.session.data)
+    res.json({
+      code: 0,
+      data: req.session.data,
+    })
     //处于登录状态了
   } else {
     //进行密码验证
@@ -19,8 +22,8 @@ router.post('/login', function (req, res, next) {
         name: 'zpliu',
         grade: 'master',
         role: 'Administrator',
+        token: cryptPw(req.session.id + 'zpliu'),
       }
-      console.log(req.session)
       res.redirect('/login')
     } else {
       res.send({
