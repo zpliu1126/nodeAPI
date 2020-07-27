@@ -49,8 +49,10 @@ router.post('/login', function (req, res, next) {
         })
       } else {
         res.send({
-          code: 6000,
-          message: '账号或密码错误',
+          code: 2, //账号或密码错误
+          data: {
+            message: '账号或密码错误',
+          },
         })
       }
     })
@@ -81,8 +83,23 @@ router.post('/register', function (req, res, next) {
       '${password}'
     ) ;
  `
-  sqlQueryPromise(sql, next).then(() => {
-    res.json({ code: 0 }) //登录成功
+  sqlQueryPromise(sql, next).then((result) => {
+    if (result.code == 1062) {
+      res.json({
+        code: 1, //重复注册
+        data: {
+          message: '邮箱已经注册换一个试试',
+        },
+      }) //登录成功
+      return
+    } else {
+      res.json({
+        code: 0,
+        data: {
+          message: '注册成功',
+        },
+      })
+    }
   })
 })
 module.exports = router

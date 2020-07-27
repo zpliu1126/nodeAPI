@@ -46,7 +46,7 @@ const sqlPoolconnection = mysql.createPool({
 const sqlQueryPromise = function (sql, next) {
   return new Promise((resolve, NULL) => {
     sqlPoolconnection.query(sql, function (err, result) {
-      if (err) {
+      if (err && err.errno != 1062) {
         console.log(err)
         logger.error(
           'sql language error: errcode:' + err.errno + '\t`' + err.sql + '`'
@@ -54,6 +54,9 @@ const sqlQueryPromise = function (sql, next) {
         next({
           code: err.errno,
         }) //sql language error
+        return
+      } else if (err && err.errno == 1062) {
+        resolve({ code: 1062 })
         return
       }
       resolve(result)
