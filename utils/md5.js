@@ -1,7 +1,7 @@
-var crypto = require('crypto')
-var md5 = crypto.createHash('md5')
+var CryptoJS = require('crypto-js')
+
 cryptPW = function (str) {
-  return md5.update(str).digest('hex')
+  return CryptoJS.HmacMD5(str, 'cotton').toString()
 }
 module.exports = {
   cryptPW,

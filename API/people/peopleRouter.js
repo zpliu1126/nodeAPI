@@ -26,13 +26,9 @@ FROM
     ON student.\`grade\` = grade.\`id\` 
 ORDER BY student.\`grade\` ASC ;
   `
-  sqlQueryPromise(`use ${DataBase};`, next)
-    .then(() => {
-      return sqlQueryPromise(sql, next)
-    })
-    .then((result) => {
-      res.json(result)
-    })
+  sqlQueryPromise(sql, next).then((result) => {
+    res.json(result)
+  })
 })
 /**
  * update one person Message
@@ -49,55 +45,21 @@ SET
   \`email\` = '${req.body.email}' 
 WHERE \`id\` =${req.body.id}  ;
   `
-  sqlQueryPromise(`use ${DataBase};`, next)
-    .then(() => {
-      return sqlQueryPromise(sql, next)
-    })
-    .then(() => {
-      res.json({ code: 0 })
-    })
+  sqlQueryPromise(sql, next).then(() => {
+    res.json({ code: 0 })
+  })
 })
 
 /**
  * insert one person Message
  */
-router.post('/people/insert', function (req, res, next) {
-  sql = `
-   INSERT INTO student (
-    \`name\`,
-    \`sex\`,
-    \`grade\`,
-    \`photo\`,
-    \`email\`
-  ) 
-  VALUES
-    (
-      '${req.body.name}' ,
-      ${req.body.sex},
-      ${req.body.grade},
-      '${req.body.photo}',
-      '${req.body.email}'
-    ) ; 
-  `
-  sqlQueryPromise(`use ${DataBase};`, next)
-    .then(() => {
-      return sqlQueryPromise(sql, next)
-    })
-    .then(() => {
-      res.json({ code: 0 })
-    })
-})
 router.post('/people/delete', function (req, res, next) {
   sql = `
   DELETE FROM student WHERE id=${req.body.id};
   `
-  sqlQueryPromise(`use ${DataBase};`, next)
-    .then(() => {
-      return sqlQueryPromise(sql, next)
-    })
-    .then(() => {
-      res.json({ code: 0 })
-    })
+  sqlQueryPromise(sql, next).then(() => {
+    res.json({ code: 0 })
+  })
 })
 
 /**

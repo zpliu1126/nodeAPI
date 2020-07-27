@@ -13,6 +13,7 @@ const sqlPoolconnection = mysql.createPool({
   user: 'BioCotton',
   password: 'BioCotton39558728cotton@',
   port: 3306,
+  database: 'wordpress',
 })
 
 // function handleDisconnect() {

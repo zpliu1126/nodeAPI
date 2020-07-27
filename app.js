@@ -20,7 +20,7 @@ app.use(
     secret: 'cotton',
     name: 'cotttonweb_session_id',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     cookie: {
       maxAge: 86400000, //cookie一天之后过期
       path: '/',
