@@ -2,6 +2,10 @@
  * auth router
  */
 var routers = []
+
+const renderRouter = require(path.join(__dirname, 'render.js'))
+routers.push(renderRouter)
+
 const authRouter = require(path.join(__dirname, 'auth/index.js'))
 routers.push(authRouter)
 /**
