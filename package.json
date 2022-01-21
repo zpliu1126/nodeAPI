@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.1",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "mysql": "^2.18.1",
     "session-file-store": "^1.4.0"
   }
